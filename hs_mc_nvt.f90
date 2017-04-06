@@ -410,10 +410,8 @@ implicit none
 double precision :: r2, r2i, r6i, en, vir
 
 if(r2<rcut2) then
- r2i = sig2/r2
- r6i = r2i*r2i*r2i
- en  = eps4*(r6i*r6i-r6i)
- vir = eps48*(r6i*r6i-0.5d0*r6i)
+en = 1.0E4
+vir = eps48*(r6i*r6i-0.5d0*r6i)
 else
  en  = 0.0
  vir = 0.0
