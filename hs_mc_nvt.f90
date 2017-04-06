@@ -461,9 +461,9 @@ o = int(nat*ranf(iseed)) + 1
 
 call eneri(rx(o), ry(o), rz(o), o, jb, eno, viro)
 
-rxn = rx(o) + (ranf(iseed)-0.5d0)*dr
-ryn = ry(o) + (ranf(iseed)-0.5d0)*dr
-rzn = rz(o) + (ranf(iseed)-0.5d0)*dr
+rxn = rx(o) + (2*ranf(iseed)-1.0d0)*dr
+ryn = ry(o) + (2*ranf(iseed)-1.0d0)*dr
+rzn = rz(o) + (2*ranf(iseed)-1.0d0)*dr
 
 call eneri(rxn, ryn, rzn, o, jb, enn, virn)
 
